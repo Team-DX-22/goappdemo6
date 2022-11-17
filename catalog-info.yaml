@@ -1,0 +1,37 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "goappdemo6"
+  description: "goappdemo6"
+  annotations:
+    github.com/project-slug: Team-DX-22/goappdemo6
+    backstage.io/techdocs-ref: dir:.
+    argocd/app-name: dev-goappdemo6
+    backstage.io/kubernetes-id: "goappdemo6"
+    sonarqube.org/project-key: "goappdemo6"
+    grafana/tag-selector: "kubernetes"
+    prometheus.io/rule: container_cpu_usage_seconds_total{namespace="goappdemo6"}
+    prometheus.io/alert: all
+  links:
+    - url: https://goappdemo6.demo.fisdev.link
+      title: Website
+      icon: Website
+    - url: https://grafana.demo.fisdev.link/
+      title: Dashboard
+      icon: dashboard      
+    - url: https://alerts.demo.fisdev.link/
+      title: Alerts
+      icon: alert 
+    - url: https://aa3abe65c0e8f48638331421a5e7ae65-1331276987.ap-south-1.elb.amazonaws.com/applications/dev-goappdemo6?resource=
+      title: ArgoCD
+      icon: cloud
+  tags:
+    - golang
+    - "participant-portal"
+    - "service"
+    - "experimental"
+spec:
+  system: "participant-portal"
+  type:  "service"
+  lifecycle: "experimental"
+  owner: "retirement-engineering"
